@@ -1,9 +1,10 @@
 package com.ifood.iFood.adapter;
 
-import com.ifood.iFood.models.autorizacao.Autorizacao;
 import com.ifood.iFood.models.Spotify;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestHeader;
 
 //postman
 
@@ -14,17 +15,6 @@ public interface MusicClient {
     Spotify getSpotify(
             @RequestHeader(value = "Authorization") String token,
             @PathVariable("categoria")String categoria);
-
-
-//    @PostMapping
-//    Autorizacao getAutorizacao(
-//            @RequestHeader(value = "Authorization", required = true) String credentials,
-//            @RequestHeader(value = "Content-Type", required = true) String contentType);
-
-
-
-
-
 
 }
 
