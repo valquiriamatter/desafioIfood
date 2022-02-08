@@ -1,4 +1,7 @@
-# desafioIfood
-Desafio Ifood
+# Desafio iFood
 
-Link do Desafio: https://github.com/ifood/vemproifood-backend
+Projeto que implementa o desafio do iFood conforme especificações do link: https://github.com/ifood/vemproifood-backend
+
+## Tecnologias
+
+Java e Spring Cloud Feign.
