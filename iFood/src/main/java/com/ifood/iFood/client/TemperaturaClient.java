@@ -1,6 +1,6 @@
-package com.ifood.iFood.adapter;
+package com.ifood.iFood.client;
 
-import com.ifood.iFood.models.Temperatura;
+import com.ifood.iFood.models.temperatura.Temperatura;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

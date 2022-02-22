@@ -1,4 +1,4 @@
-package com.ifood.iFood.adapter;
+package com.ifood.iFood.client;
 
 import com.ifood.iFood.models.autorizacao.Autorizacao;
 import com.ifood.iFood.models.autorizacao.Usuario;

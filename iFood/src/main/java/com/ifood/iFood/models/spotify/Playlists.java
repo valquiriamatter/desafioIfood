@@ -1,4 +1,4 @@
-package com.ifood.iFood.models;
+package com.ifood.iFood.models.spotify;
 
 import java.util.List;
 

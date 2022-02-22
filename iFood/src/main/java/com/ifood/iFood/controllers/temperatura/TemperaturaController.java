@@ -1,6 +1,7 @@
-package com.ifood.iFood.adapter;
+package com.ifood.iFood.controllers.temperatura;
 
-import com.ifood.iFood.models.Temperatura;
+import com.ifood.iFood.client.TemperaturaClient;
+import com.ifood.iFood.models.temperatura.Temperatura;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -8,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/temperatura")
-public class TemperaturaService {
+public class TemperaturaController {
 
     private final TemperaturaClient temperaturaClient;
 

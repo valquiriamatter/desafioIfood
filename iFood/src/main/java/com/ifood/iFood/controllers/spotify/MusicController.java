@@ -1,6 +1,8 @@
-package com.ifood.iFood.adapter;
+package com.ifood.iFood.controllers.spotify;
 
-import com.ifood.iFood.models.Spotify;
+import com.ifood.iFood.client.MusicClient;
+import com.ifood.iFood.controllers.autorizacao.TokenController;
+import com.ifood.iFood.models.spotify.Spotify;
 import com.ifood.iFood.models.autorizacao.Autorizacao;
 import com.ifood.iFood.models.autorizacao.Usuario;
 import lombok.AllArgsConstructor;
@@ -10,16 +12,16 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/music")
-public class MusicService {
+public class MusicController {
 
     private final MusicClient musicClient;
-    private TokenService tokenService;
+    private TokenController tokenController;
 
     @ResponseStatus(HttpStatus.OK)
     @RequestMapping(value = "/{categoria}", method = RequestMethod.GET)
     public Spotify getSpotify(@RequestBody Usuario usuario, @PathVariable String categoria) {
 
-        Autorizacao autorizacao = tokenService.getAutorizacao(usuario);
+        Autorizacao autorizacao = tokenController.getAutorizacao(usuario);
         String token = "Bearer " + autorizacao.getTokenAcesso();
 
         return musicClient.getSpotify(token, categoria);

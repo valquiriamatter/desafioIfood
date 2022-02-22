@@ -1,4 +1,4 @@
-package com.ifood.iFood.models;
+package com.ifood.iFood.models.temperatura;
 
 public class Temperatura {
 

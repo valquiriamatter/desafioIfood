@@ -1,23 +1,20 @@
-package com.ifood.iFood.adapter;
+package com.ifood.iFood.controllers.autorizacao;
 
+import com.ifood.iFood.client.TokenClient;
 import com.ifood.iFood.models.autorizacao.Autorizacao;
 import com.ifood.iFood.models.autorizacao.Usuario;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
-import java.nio.charset.StandardCharsets;
 import java.util.Base64;
-import java.util.Map;
 
 @RestController
 @AllArgsConstructor
 @RequestMapping("/token")
-public class TokenService {
+public class TokenController {
 
     @Autowired
     private final TokenClient tokenClient;
@@ -31,6 +28,7 @@ public class TokenService {
 
         return tokenClient.getAutorizacao(credentialsBase64, MediaType.APPLICATION_FORM_URLENCODED_VALUE, usuario);
     }
+
 
 
 
